@@ -27,3 +27,6 @@ Animación mínima: CSS sin dependencias ni JavaScript adicional; entrada de fot
 
 ## Revisión editorial 7 de octubre
 Build y TypeScript aprobados. Navegador español a 390px: sin overflow, tres campos y tres beneficios, sin sección de crisis. Textos de espera conservados. Ver docs/EDITORIAL-REVISION.md para alcance y fuentes.
+
+Refinamiento visual: siete iconos SVG decorativos, fotos ampliadas, CTA de beneficios y pasos rediseñados. Build y tipos aprobados. Español 390px sin overflow y tres campos conservados. Animación por IntersectionObserver con desconexión tras revelar y preferencia de movimiento reducido; contenido visible sin JS.
+
