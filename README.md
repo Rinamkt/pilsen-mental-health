@@ -1,6 +1,6 @@
 # Pilsen Wellness Center — Mental Health
 
-Landing bilingüe Next.js + TypeScript, lista para un repositorio independiente. Sin bibliotecas de UI, fuentes remotas, stock, píxeles ni servicios de seguimiento instalados. CSS propio y componentes interactivos ligeros. No es un lanzamiento público: falta conectar la recepción de solicitudes y sustituir las fotografías pendientes.
+Landing bilingüe Next.js + TypeScript, lista para un repositorio independiente. Sin bibliotecas de UI, fuentes remotas, stock, píxeles ni servicios de seguimiento instalados. CSS propio y componentes interactivos ligeros. Existe una vista pública de revisión en https://pilsen-mental-health.vercel.app. El formulario permanece desactivado y la página usa noindex. Las fotos integradas son ilustraciones generadas con IA.
 
 ## Revisión visual v2
 
@@ -44,7 +44,7 @@ El lockfile fija la resolución usada; conservarlo en GitHub. `pnpm build` gener
 5. Tras completar los pendientes y validar recepción real, configura el dominio final, `SITE_URL` y `SITE_INDEXABLE=true`; vuelve a desplegar. Canonical, hreflang y sitemap se generan con ese origen. Las variables públicas y el modo del formulario se aplican al compilar: requieren rebuild.
 6. Prueba ambas URLs en el dominio publicado; la configuración de backend requiere el mismo origen. El workflow `.github/workflows/verify.yml` ejecuta pruebas, build y chequeo de tipos.
 
-No se ha creado repositorio remoto ni despliegue como parte de esta entrega.
+Repositorio: https://github.com/Rinamkt/pilsen-mental-health. Vista de revisión desplegada en Vercel; los pushes a main actualizan esa vista.
 
 ## Dónde completar los datos
 
@@ -92,7 +92,7 @@ Consulta `docs/TRACKING.md`. Se entrega un adaptador local desactivado por defec
 - `src/lib/site.ts`, `copy.ts`: datos y copy por idioma.
 - `src/lib/locations.ts`, `src/components/Locations.tsx`: directorio completo y filtros locales sin tracking de filtros.
 - `src/app/api/appointment/route.ts`: contrato del receptor.
-- `docs/BRIEF.md`: copia del brief original, referencia principal.
+- `docs/BRIEF.md`: referencia local original, excluida del repositorio público.
 - `docs/SOURCES.md`: fuentes y decisiones.
 - `docs/QA.md`: verificaciones realizadas y límites.
 

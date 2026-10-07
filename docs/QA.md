@@ -24,3 +24,6 @@ Build, TypeScript y las cuatro pruebas existentes aprobados. Navegador: tres sed
 
 Animación mínima: CSS sin dependencias ni JavaScript adicional; entrada de fotos 650 ms, transiciones de controles 180 ms y elevación de sedes 3 px solo con puntero preciso. Todo condicionado a prefers-reduced-motion: no-preference. Build y tipos aprobados; navegador confirma animación y formulario visible. No se simuló la preferencia de movimiento reducido en navegador.
 
+
+## Revisión editorial 7 de octubre
+Build y TypeScript aprobados. Navegador español a 390px: sin overflow, tres campos y tres beneficios, sin sección de crisis. Textos de espera conservados. Ver docs/EDITORIAL-REVISION.md para alcance y fuentes.
