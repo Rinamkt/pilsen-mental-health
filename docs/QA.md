@@ -30,3 +30,6 @@ Build y TypeScript aprobados. Navegador español a 390px: sin overflow, tres cam
 
 Refinamiento visual: siete iconos SVG decorativos, fotos ampliadas, CTA de beneficios y pasos rediseñados. Build y tipos aprobados. Español 390px sin overflow y tres campos conservados. Animación por IntersectionObserver con desconexión tras revelar y preferencia de movimiento reducido; contenido visible sin JS.
 
+
+## Formulario y movimiento — 12 de octubre de 2026
+Cinco campos en ambos idiomas. Medicaid sí/no; sin exclusión automática. Sedes de counseling no marcadas como próxima apertura, más guidance. Servicio mental-health/other; sin texto clínico. Servidor valida listas permitidas. Cinco pruebas aprobadas, incluido payload completo y rechazo de unsure. El receptor debe aceptar el contrato nuevo antes de habilitar intake. Tracking no incluye valores del formulario. Animaciones finitas adicionales condicionadas a movimiento reducido.

@@ -64,14 +64,14 @@ Para las fotografías, usar WebP o AVIF, dimensiones aproximadas de 1200×800, p
 
 ## Formulario: integración real, sin éxito simulado
 
-Solo tres campos: nombre, teléfono y Medicaid (sí/no/no sé). Sin correo, datos clínicos, campos ocultos de campaña ni almacenamiento del formulario en navegador. La solicitud viaja en POST JSON a `/api/appointment`, nunca en la URL.
+Cinco campos: nombre, teléfono, Medicaid (sí/no), sede preferida y servicio (salud mental/otro). Sin correo, datos clínicos, campos ocultos de campaña ni almacenamiento del formulario en navegador. La solicitud viaja en POST JSON a `/api/appointment`, nunca en la URL.
 
 En el estado entregado, el botón de envío está desactivado y se muestra el aviso de vista previa. La API responde 503 y no envía ni guarda datos. La línea principal de citas y los teléfonos de las 19 sedes son marcables. La sección de crisis se retiró a petición del usuario.
 
 Para activar:
 
 1. Configura un receptor HTTPS aprobado para estos datos, su política de retención y acceso. No basta con un webhook público cualquiera. Incluye límites de solicitudes y protección contra abuso en Vercel/WAF y en el receptor antes de habilitar captación. No añadir capturas de sesión ni logging del cuerpo.
-2. El receptor debe aceptar `POST` con `Authorization: Bearer <INTAKE_TOKEN>` y JSON `{ "name": "...", "phone": "...", "medicaid": "yes|no|unsure" }`.
+2. El receptor debe aceptar `POST` con `Authorization: Bearer <INTAKE_TOKEN>` y JSON `{ "name": "...", "phone": "...", "medicaid": "yes|no", "location": "guidance o nombre de sede permitido", "service": "mental-health|other" }`.
 3. Debe devolver HTTP 2xx y `{ "accepted": true }` **únicamente después de guardar o aceptar durablemente la solicitud**. Una respuesta 200 sin ese indicador se trata como fallo. Implementar deduplicación en el receptor ante reintentos y respuestas perdidas.
 4. Define `INTAKE_ENDPOINT`, `INTAKE_TOKEN`, `SITE_URL` y `INTAKE_ENABLED=true` y recompila. El token se usa solo en servidor.
 5. Prueba con datos ficticios autorizados: recepción, rechazo del receptor, timeout, reintento y mensaje de éxito. El éxito dice solicitud recibida; nunca cita reservada.
