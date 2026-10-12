@@ -56,3 +56,14 @@
  .button:not(:disabled):active{transform:scale(.98)}
  @media(hover:hover) and (pointer:fine){.button:not(:disabled):hover{transform:translateY(-2px)}.benefit-symbol:hover{transform:rotate(-6deg) scale(1.04)}}
 }
+
+/* A human welcome beside the next steps, with the same reading order on mobile. */
+.hero .medicaid-highlight{margin-top:24px;max-width:none}
+.next-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:center;margin-top:36px}
+.next-photo{width:100%;aspect-ratio:4/5;border-radius:70px 8px 70px 8px}
+.next-grid .steps{grid-template-columns:1fr;gap:16px;margin:0 0 20px}
+.next-grid .steps li{display:grid;grid-template-columns:54px 1fr;gap:6px 20px;padding:24px}
+.next-grid .steps .step-badge{grid-row:1/3;margin:0}
+.next-grid .steps h3{margin:0;align-self:center}
+.next-grid .steps p{grid-column:2}
+@media(max-width:899px){.hero .hero-photo{order:0}.hero .medicaid-highlight{margin-top:0}.next-grid{grid-template-columns:1fr;gap:26px;margin-top:28px}.next-photo{aspect-ratio:4/3;border-radius:45px 8px 45px 8px}.next-photo>img{object-position:center 38%}.next-grid .steps li{grid-template-columns:42px 1fr;gap:6px 14px;padding:22px}}
