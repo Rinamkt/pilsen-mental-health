@@ -52,3 +52,5 @@ Las dos imágenes generadas están integradas en hero y Why Pilsen. Son escenas 
 
 ## Ajustes UX autorizados
 Se retira la sección completa de crisis y su teléfono local: el usuario informa que Pilsen no presta ese servicio actualmente. Esta indicación prevalece sobre las fuentes anteriores. Los tiempos de espera permanecen sin cambios por indicación expresa. Se conservan las 19 ubicaciones con tres visibles inicialmente; los filtros reinician la vista compacta. Próximos pasos precede a servicios. WhatsApp queda secundario en formulario y cierre. No se dispone de receptor ni credenciales INTAKE: el formulario continúa desactivado, sin éxito simulado.
+
+2026-10-15: Nonprofit and neighborhood history verified at https://www.pilsenwellnesscenter.org/en/about . Medicaid-only online form audience, required email and additional preferences requested by client. This is form scope, not a claim that all Pilsen programs accept only Medicaid.

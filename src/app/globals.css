@@ -67,3 +67,5 @@
 .next-grid .steps h3{margin:0;align-self:center}
 .next-grid .steps p{grid-column:2}
 @media(max-width:899px){.hero .hero-photo{order:0}.hero .medicaid-highlight{margin-top:0}.next-grid{grid-template-columns:1fr;gap:26px;margin-top:28px}.next-photo{aspect-ratio:4/3;border-radius:45px 8px 45px 8px}.next-photo>img{object-position:center 38%}.next-grid .steps li{grid-template-columns:42px 1fr;gap:6px 14px;padding:22px}}
+
+.phone-digits{display:block;font:12px/1.4 Arial,sans-serif;letter-spacing:.02em}.medicaid-confirm{background:var(--beige);padding:15px;margin:12px 0}.form-card .medicaid-confirm label{display:flex;gap:12px;align-items:flex-start}.form-card .medicaid-confirm input{width:20px;height:20px;flex-shrink:0;margin:2px 0;accent-color:var(--navy)}.medicaid-confirm .coverage-help{margin-bottom:0}.medicaid-confirm label{min-height:44px}
