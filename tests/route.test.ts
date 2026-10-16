@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { POST } from '../src/app/api/appointment/route.ts';
 test('intake enforces boundaries and confirms only durable acceptance', async () => {
  process.env.INTAKE_ENABLED='true'; process.env.INTAKE_ENDPOINT='https://intake.example.test'; process.env.INTAKE_TOKEN='test-token'; process.env.SITE_URL='https://landing.example.test';
- const payload={name:'QA Test',phone:'3125550100',email:'test@example.com',careFor:'self',callbackTime:'any',medicaid:'yes',location:'guidance',service:'mental-health'};
+ const payload={name:'QA Test',phone:'3125550100',email:'test@example.com',careFor:'self',callbackTime:'any',location:'guidance',service:'mental-health'};
  const request=(body=JSON.stringify(payload),origin='https://landing.example.test',type='application/json')=>new Request('https://landing.example.test/api/appointment',{method:'POST',headers:{origin,'Content-Type':type},body});
  let sent=0;
  const original=globalThis.fetch;

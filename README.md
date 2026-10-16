@@ -106,3 +106,6 @@ Las dos imágenes generadas están integradas en hero y Why Pilsen. Son escenas 
 
 ## Intake revision — 2026-10-15
 This revision supersedes the earlier five-field contract. Required: name (full name), phone, email, service (mental-health|other), location (allowed location|guidance), careFor (self|family), medicaid (yes only, explicit checkbox). Optional callbackTime: any|morning|afternoon, Chicago time; defaults to any. Contact information belongs to the person completing the form, including family inquiries. Receiver integration must accept all these fields before activation. No data is sent to analytics. Submission remains disabled in preview. The main phone uses accessible text 844-211-HEAL and visible numeric equivalent 844-211-4325, both within the same tel link.
+
+## Medicaid messaging revision — 2026-10-16
+Medicaid audience is communicated in the hero, form introduction and trust row. The checkbox and warning panel are removed. The API no longer collects or infers Medicaid status: remove medicaid from the receiver contract. Coverage is discussed with the team. This supersedes the October 15 confirmation requirement.
