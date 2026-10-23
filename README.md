@@ -119,5 +119,5 @@ Care preferences (service, location, self/family, Medicaid yes/no with no defaul
 ## Visual refresh — October 23, 2026
 - Portrait hero: `public/images/counseling-portrait-v2.png`, an AI-generated fictional scene, not actual staff, patients, premises or a testimonial. Existing panoramic photo reused beside intake. Both languages share the layout.
 - Six lightweight decorative SVG illustrations in `SupportArt.tsx`; meaning remains in visible headings. Motion honors reduced-motion preferences. Images use Next Image responsive loading.
-- Joliet is featured before location filters so it is discoverable without expanding the directory. Official source still says Coming Soon; it remains excluded from active intake locations. Source checked: https://www.pilsenwellnesscenter.org/en/locations (2026-10-23).
+- Joliet remains a regular card in the full location directory, without a separate promotional highlight. Official source still says Coming Soon; it remains excluded from active intake locations. Source checked: https://www.pilsenwellnesscenter.org/en/locations (2026-10-23).
 - Design references: https://www.charliehealth.com/our-programs/adult-mental-health (visual variety only); https://www.nngroup.com/articles/photos-as-web-content/ (relevant imagery rather than decorative stock overload).
