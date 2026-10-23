@@ -2,8 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { validateIntake } from '../src/lib/validation.ts';
 import { track, setMeasurementConsent } from '../src/lib/analytics.ts';
-const valid = { name: 'Test Person', phone: '312-555-0100', email: 'test@example.com', careFor: 'self', callbackTime: 'any',  location: 'guidance', service: 'mental-health' };
-test('accepts a request without collecting Medicaid status', () => { const result = validateIntake(valid); assert.ok(result); assert.equal('medicaid' in result, false); });
+const valid = { medicaid: 'yes', name: 'Test Person', phone: '312-555-0100', email: 'test@example.com', careFor: 'self', callbackTime: 'any',  location: 'guidance', service: 'mental-health' };
+test('accepts both Medicaid answers and requires an explicit selection', () => { for (const medicaid of ['yes','no']) assert.ok(validateIntake({...valid,medicaid})); for (const medicaid of ['',undefined,'unsure']) assert.equal(validateIntake({...valid,medicaid}),null); });
 test('rejects malformed input, extra clinical fields and oversized values', () => {
   for (const value of [null, [], {}, {...valid, diagnosis:'test'}, {...valid,name:' '}, {...valid,name:'x'.repeat(81)}, {...valid,phone:'abc1234567'}, {...valid,phone:'123'}, {...valid,medicaid:'maybe'}]) assert.equal(validateIntake(value),null);
 });

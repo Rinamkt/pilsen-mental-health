@@ -112,3 +112,6 @@ Medicaid audience is communicated in the hero, form introduction and trust row. 
 
 ## Editorial structure — 2026-10-23
 Hero with direct appointment anchor, trust row, benefits, Why Pilsen, next steps, FAQs, full intake, care topics, locations and closing CTA. One form only; mobile sticky request and call remain available. SEO titles and descriptions localized. Intake remains disabled pending approved receiver.
+
+## Two-step intake
+Care preferences (service, location, self/family, Medicaid yes/no with no default), followed by contact details and optional callback time. Both Medicaid answers accepted. Back retains values in mounted controls; no storage, tracking or network request on Continue/Back. Only final submission uses the approved receiver. Receiver contract again requires medicaid: yes|no. Preview allows navigation but disables final submission.
