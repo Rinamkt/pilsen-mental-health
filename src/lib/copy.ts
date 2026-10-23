@@ -1,7 +1,7 @@
 export const copy = {
   en: {
     title: 'Mental Health Counseling in Chicago | Pilsen Wellness Center', description: 'Individual counseling and support with family relationships in Chicago and surrounding communities. English and Spanish care for people with Medicaid.',
-    skip: 'Skip to content', eyebrow: 'MENTAL HEALTH · CHICAGO & SUBURBS', headline: 'Mental Health Counseling in Chicago and Surrounding Communities', emphasis: 'More tools for everyday life. Space to be you.', intro: 'Therapy can help you understand your emotions and find new ways forward. Care for people with Medicaid, in English and Spanish, close to your Chicago community.',
+    skip: 'Skip to content', eyebrow: 'MENTAL HEALTH · CHICAGO & SUBURBS', headline: 'Mental Health Counseling in Chicago and Surrounding Communities', emphasis: 'More tools for everyday life. Space to be you.', intro: 'Find support and tools for everyday life. Counseling for people with Medicaid, in English and Spanish.',
     appointment: 'Request an appointment', call: 'Call', pendingPhone: 'Appointment phone pending', heritage: 'Rooted in our community. Here for you.',
     formTitle: 'Your next step starts here.', formIntro: 'Tell us what care you’re looking for, then how we can reach you. Our team will help you explore your next step.', name: 'First and last name', phone: 'Phone number', medicaid: 'Do you have Medicaid?', select: 'Select an option', yes: 'Yes', no: 'No', sending: 'Sending…',
     privacy: 'Contact details and care preferences only. Please don’t include symptoms or diagnoses.', consent: 'By requesting an appointment, you ask Pilsen to contact you about your request.', privacyLink: 'Privacy notice',
@@ -20,7 +20,7 @@ export const copy = {
   },
   es: {
     title: 'Atención de salud mental en Chicago | Pilsen Wellness Center', description: 'Terapia individual y apoyo para las relaciones familiares en Chicago y comunidades cercanas. Atención en español e inglés para personas con Medicaid.',
-    skip: 'Saltar al contenido', eyebrow: 'SALUD MENTAL · CHICAGO Y ALREDEDORES', headline: 'Atención de salud mental en Chicago y comunidades cercanas.', emphasis: 'Más herramientas para tu día a día. Un espacio para ti.', intro: 'La terapia puede ayudarte a comprender tus emociones y encontrar nuevas formas de avanzar. Atención para personas con Medicaid, en español e inglés, cerca de tu comunidad en Chicago.',
+    skip: 'Saltar al contenido', eyebrow: 'SALUD MENTAL · CHICAGO Y ALREDEDORES', headline: 'Atención de salud mental en Chicago y comunidades cercanas.', emphasis: 'Más herramientas para tu día a día. Un espacio para ti.', intro: 'Encuentra acompañamiento y herramientas para tu día a día. Terapia para personas con Medicaid, en español e inglés.',
     appointment: 'Pide tu cita', call: 'Llamar', pendingPhone: 'Teléfono de citas pendiente', heritage: 'Parte de tu comunidad. Cerca de ti.',
     formTitle: 'Tu siguiente paso empieza aquí.', formIntro: 'Cuéntanos qué atención buscas y después cómo contactarte. Nuestro equipo te ayudará a explorar el siguiente paso.', name: 'Nombre y apellido', phone: 'Teléfono', medicaid: '¿Tienes Medicaid?', select: 'Elige una opción', yes: 'Sí', no: 'No', sending: 'Enviando…',
     privacy: 'Solo datos de contacto y preferencias de atención. No incluyas síntomas ni diagnósticos.', consent: 'Al pedir tu cita, solicitas que Pilsen te contacte sobre tu solicitud.', privacyLink: 'Aviso de privacidad',

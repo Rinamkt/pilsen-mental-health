@@ -9,5 +9,5 @@ export const site = {
  dedicatedPhone: true,
  locations,
  whatsapp: 'https://api.whatsapp.com/send/?phone=18723080000&text=Hello%2C+I+have+a+question%3F&type=phone_number&app_absent=0',
- images: { hero: '/images/mental-health-conversation-v1.png', community: '/images/community-welcome-v1.png', location: '', next: '/images/next-step-guidance-v1.png' }
+ images: { hero: '/images/counseling-portrait-v2.png', community: '/images/community-welcome-v1.png', location: '', next: '/images/next-step-guidance-v1.png' }
 };
