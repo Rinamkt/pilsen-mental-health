@@ -109,3 +109,6 @@ This revision supersedes the earlier five-field contract. Required: name (full n
 
 ## Medicaid messaging revision — 2026-10-16
 Medicaid audience is communicated in the hero, form introduction and trust row. The checkbox and warning panel are removed. The API no longer collects or infers Medicaid status: remove medicaid from the receiver contract. Coverage is discussed with the team. This supersedes the October 15 confirmation requirement.
+
+## Editorial structure — 2026-10-23
+Hero with direct appointment anchor, trust row, benefits, Why Pilsen, next steps, FAQs, full intake, care topics, locations and closing CTA. One form only; mobile sticky request and call remain available. SEO titles and descriptions localized. Intake remains disabled pending approved receiver.
