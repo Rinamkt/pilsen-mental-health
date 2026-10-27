@@ -28,3 +28,7 @@ El formulario continúa en vista previa, sin recepción activa. No se instaló C
 
 ## Corrección literal posterior
 Por instrucción explícita del usuario, los textos especificados por Lucía en inglés se restauraron sin abreviarlos, incluidas FAQs, hero completo visible, beneficios, Why, paso 2, formulario, aviso médico y sexta tarjeta. Español traducido fielmente. Esta corrección reemplaza las adaptaciones y el desplegable del hero descritos arriba. Se omiten únicamente notas editoriales de Lucía, numeración de instrucciones y el signo + de la FAQ (ya es el control visual del acordeón). Se conserva el H1 SEO solicitado y se muestra completo el segundo encabezado propuesto.
+
+## Organización editorial final
+Por indicación del usuario, se conserva la redacción de Lucía con jerarquía editorial: un solo H1 visible (Mental Health Care in Chicago That Understands You), descripción introductoria, párrafos de contexto separados y bloque de cobertura. El título SEO geográfico permanece en metadatos. Why PWC separa historia, mensaje principal y valores; las FAQs muestran párrafos reales. Se retiran encabezados, eslogan y avisos antiguos duplicados, conservando consentimiento y aviso médico. Esta organización sustituye la decisión anterior de mostrar dos encabezados en el hero. Aplicado a ambos idiomas.
+

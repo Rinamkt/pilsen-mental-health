@@ -41,7 +41,7 @@ export function AppointmentForm({ locale, enabled }: { locale: Locale; enabled: 
     } catch { setStatus(c.error); } finally { setBusy(false); lock.current = false; }
   }
   return <section className="form-card" id="appointment" aria-labelledby="form-title" tabIndex={-1}>
-    <div className="form-heading"><span className="small-label">{c.appointment}</span><h2 id="form-title">{c.formTitle}</h2><p>{c.formIntro}</p></div>
+    <div className="form-heading"><h2 id="form-title">{c.formTitle}</h2><p>{c.formIntro}</p></div>
     <form noValidate onSubmit={submit} method="post" action="/api/appointment" aria-describedby="form-privacy" aria-busy={busy}>
       <div className="form-progress" aria-label={locale === 'es' ? 'Progreso de la solicitud' : 'Request progress'}><span aria-current={step === 1 ? 'step' : undefined}>1 · {locale === 'es' ? 'Atención' : 'Care'}</span><span aria-current={step === 2 ? 'step' : undefined}>2 · {locale === 'es' ? 'Contacto' : 'Contact'}</span></div>
       <h3 ref={stepHeading} tabIndex={-1} className="step-heading">{locale === 'es' ? `Paso ${step} de 2: ${step === 1 ? '¿Qué atención buscas?' : '¿Cómo podemos contactarte?'}` : `Step ${step} of 2: ${step === 1 ? 'What care are you looking for?' : 'How can we reach you?'}`}</h3>
@@ -69,10 +69,10 @@ export function AppointmentForm({ locale, enabled }: { locale: Locale; enabled: 
       <div className="form-step-actions">{step === 2 && <button className="back-button" type="button" disabled={busy || sent} onClick={() => moveTo(1)}>{locale === 'es' ? 'Volver' : 'Back'}</button>}<button className="button" type="submit" disabled={busy || sent || (step === 2 && !enabled)}>{step === 1 ? (locale === 'es' ? 'Continuar' : 'Continue') : busy ? c.sending : c.appointment}<span aria-hidden="true">↗</span></button></div>
       <p className="request-explainer">{c.requestNote}</p>
       {!enabled && <p className="preview-note">{c.preview}</p>}
-      <p className="coverage-help insurance-reminder">{c.insuranceReminder}</p><p className="form-privacy" id="form-privacy">{c.privacy} {c.consent} <a href={`https://www.pilsenwellnesscenter.org/${locale}/privacy`}>{c.privacyLink}</a>.</p>
+
       <p role="status" aria-live="polite" className="form-status">{status}</p>
       <noscript><p>{locale === 'es' ? 'Activa JavaScript para enviar el formulario en línea.' : 'Enable JavaScript to submit the online form.'}</p></noscript>
-    </form><aside className="medical-disclaimer" id="medical-disclaimer"><h3>{c.disclaimerTitle}</h3><p>{c.disclaimer}</p><p className="disclaimer-followup">{c.postDisclaimer.slice(0, c.postDisclaimer.lastIndexOf(c.privacyLink))}<a href={`https://www.pilsenwellnesscenter.org/${locale}/privacy`}>{c.privacyLink}</a>.</p><a href="tel:911">{locale === 'es' ? 'Llamar al 911' : 'Call 911'}</a></aside><div className="form-call"><span>{site.dedicatedPhone ? c.appointment : locale === 'es' ? 'Servicios e información' : 'Services & information'}</span><Phone locale={locale} /><WhatsApp locale={locale} /></div>
+    </form><aside className="medical-disclaimer" id="medical-disclaimer"><h3>{c.disclaimerTitle}</h3><p>{c.disclaimer}</p><p className="disclaimer-followup" id="form-privacy">{c.postDisclaimer.slice(0, c.postDisclaimer.lastIndexOf(c.privacyLink))}<a href={`https://www.pilsenwellnesscenter.org/${locale}/privacy`}>{c.privacyLink}</a>.</p><a href="tel:911">{locale === 'es' ? 'Llamar al 911' : 'Call 911'}</a></aside><div className="form-call"><span>{site.dedicatedPhone ? c.appointment : locale === 'es' ? 'Servicios e información' : 'Services & information'}</span><Phone locale={locale} /><WhatsApp locale={locale} /></div>
   </section>;
 }
 
