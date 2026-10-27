@@ -72,7 +72,7 @@ export function AppointmentForm({ locale, enabled }: { locale: Locale; enabled: 
       <p className="coverage-help insurance-reminder">{c.insuranceReminder}</p><p className="form-privacy" id="form-privacy">{c.privacy} {c.consent} <a href={`https://www.pilsenwellnesscenter.org/${locale}/privacy`}>{c.privacyLink}</a>.</p>
       <p role="status" aria-live="polite" className="form-status">{status}</p>
       <noscript><p>{locale === 'es' ? 'Activa JavaScript para enviar el formulario en línea.' : 'Enable JavaScript to submit the online form.'}</p></noscript>
-    </form><aside className="medical-disclaimer" id="medical-disclaimer"><h3>{c.disclaimerTitle}</h3><p>{c.disclaimer}</p><a href="tel:911">{locale === 'es' ? 'Llamar al 911' : 'Call 911'}</a></aside><div className="form-call"><span>{site.dedicatedPhone ? c.appointment : locale === 'es' ? 'Servicios e información' : 'Services & information'}</span><Phone locale={locale} /><WhatsApp locale={locale} /></div>
+    </form><aside className="medical-disclaimer" id="medical-disclaimer"><h3>{c.disclaimerTitle}</h3><p>{c.disclaimer}</p><p className="disclaimer-followup">{c.postDisclaimer.slice(0, c.postDisclaimer.lastIndexOf(c.privacyLink))}<a href={`https://www.pilsenwellnesscenter.org/${locale}/privacy`}>{c.privacyLink}</a>.</p><a href="tel:911">{locale === 'es' ? 'Llamar al 911' : 'Call 911'}</a></aside><div className="form-call"><span>{site.dedicatedPhone ? c.appointment : locale === 'es' ? 'Servicios e información' : 'Services & information'}</span><Phone locale={locale} /><WhatsApp locale={locale} /></div>
   </section>;
 }
 

@@ -25,3 +25,6 @@ Base: documento pegado por el usuario en esta conversación. Aplicado en inglés
 Fuentes contrastadas: https://www.pilsenwellnesscenter.org/en/services/mentalHealth ; https://www.pilsenwellnesscenter.org/en/locations ; https://www.pilsenwellnesscenter.org/en/privacy . El directorio y la página de servicios presentan cifras distintas; no se presenta Joliet como abierto.
 
 El formulario continúa en vista previa, sin recepción activa. No se instaló Calendly ni se añadieron rastreadores.
+
+## Corrección literal posterior
+Por instrucción explícita del usuario, los textos especificados por Lucía en inglés se restauraron sin abreviarlos, incluidas FAQs, hero completo visible, beneficios, Why, paso 2, formulario, aviso médico y sexta tarjeta. Español traducido fielmente. Esta corrección reemplaza las adaptaciones y el desplegable del hero descritos arriba. Se omiten únicamente notas editoriales de Lucía, numeración de instrucciones y el signo + de la FAQ (ya es el control visual del acordeón). Se conserva el H1 SEO solicitado y se muestra completo el segundo encabezado propuesto.
