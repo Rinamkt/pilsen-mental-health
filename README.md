@@ -64,7 +64,7 @@ Para las fotografías, usar WebP o AVIF, dimensiones aproximadas de 1200×800, p
 
 ## Formulario: integración real, sin éxito simulado
 
-Cinco campos: nombre, teléfono, Medicaid (sí/no), sede preferida y servicio (salud mental/otro). Sin correo, datos clínicos, campos ocultos de campaña ni almacenamiento del formulario en navegador. La solicitud viaja en POST JSON a `/api/appointment`, nunca en la URL.
+Formulario de dos etapas: servicio, sede preferida, para quién se solicita atención y Medicaid (sí/no); después nombre y apellido, teléfono, correo obligatorio, horario preferido opcional y aceptación obligatoria de privacidad. Sin datos clínicos, campos ocultos de campaña ni almacenamiento del formulario en navegador. La solicitud viaja en POST JSON a `/api/appointment`, nunca en la URL.
 
 En el estado entregado, el botón de envío está desactivado y se muestra el aviso de vista previa. La API responde 503 y no envía ni guarda datos. La línea principal de citas y los teléfonos de las 19 sedes son marcables. La sección de crisis se retiró a petición del usuario.
 
@@ -119,5 +119,10 @@ Care preferences (service, location, self/family, Medicaid yes/no with no defaul
 ## Visual refresh — October 23, 2026
 - Portrait hero: `public/images/counseling-portrait-v2.png`, an AI-generated fictional scene, not actual staff, patients, premises or a testimonial. Existing panoramic photo reused beside intake. Both languages share the layout.
 - Six lightweight decorative SVG illustrations in `SupportArt.tsx`; meaning remains in visible headings. Motion honors reduced-motion preferences. Images use Next Image responsive loading.
-- Joliet remains a regular card in the full location directory, without a separate promotional highlight. Official source still says Coming Soon; it remains excluded from active intake locations. Source checked: https://www.pilsenwellnesscenter.org/en/locations (2026-10-23).
+- Joliet remains a regular card in the full location directory, without a separate promotional highlight. Official source still says Coming Soon. Since the October 27 approved revision, it is selectable as a preference labeled coming soon, not as a confirmed available appointment. Source checked: https://www.pilsenwellnesscenter.org/en/locations (2026-10-23).
 - Design references: https://www.charliehealth.com/our-programs/adult-mental-health (visual variety only); https://www.nngroup.com/articles/photos-as-web-content/ (relevant imagery rather than decorative stock overload).
+
+## Current intake contract — October 27, 2026
+The final JSON now requires `privacyAccepted: true`. A missing, false or string value is rejected server-side. The receiver must support this additional field before intake activation. Joliet is a permitted location preference with a coming-soon label. Service IDs remain `mental-health` and `other`, with the approved Medicaid/other-insurance wording. Both Medicaid answers remain permitted. Supersedes earlier historical field descriptions.
+
+The October 27 copy revision follows the supplied Lucia document in both languages, including four benefits, eight FAQs, Medicaid required, community history, medical disclaimer and expanded services. The user explicitly confirmed the next-business-days response statement and that some sites have no waiting list. No precise appointment or response date is promised.

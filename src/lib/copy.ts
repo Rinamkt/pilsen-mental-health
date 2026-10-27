@@ -1,40 +1,388 @@
 export const copy = {
-  en: {
-    title: 'Mental Health Counseling in Chicago | Pilsen Wellness Center', description: 'Individual counseling and support with family relationships in Chicago and surrounding communities. English and Spanish care for people with Medicaid.',
-    skip: 'Skip to content', eyebrow: 'MENTAL HEALTH · CHICAGO & SUBURBS', headline: 'Mental Health Counseling in Chicago and Surrounding Communities', emphasis: 'More tools for everyday life. Space to be you.', intro: 'Find support and tools for everyday life. Counseling for people with Medicaid, in English and Spanish.',
-    appointment: 'Request an appointment', call: 'Call', pendingPhone: 'Appointment phone pending', heritage: 'Rooted in our community. Here for you.',
-    formTitle: 'Your next step starts here.', formIntro: 'Tell us what care you’re looking for, then how we can reach you. Our team will help you explore your next step.', name: 'First and last name', phone: 'Phone number', medicaid: 'Do you have Medicaid?', select: 'Select an option', yes: 'Yes', no: 'No', sending: 'Sending…',
-    privacy: 'Contact details and care preferences only. Please don’t include symptoms or diagnoses.', consent: 'By requesting an appointment, you ask Pilsen to contact you about your request.', privacyLink: 'Privacy notice',
-    preview: 'Preview: online requests are not active yet. No information will be sent.', unavailable: 'Online requests are not available yet. Your information has not been sent.', success: 'Your request was received. Our team will contact you about the next step. Your appointment is not yet confirmed.', error: 'We couldn’t confirm receipt. Please try again or call. No appointment has been booked.', invalid: 'Complete your full name, valid phone and email, care preferences.',
-    trust: ['Medicaid accepted*', 'English & Spanish', '50+ years in the community', 'Children, teens & adults'], coverage: '*Coverage and eligibility depend on the program. Ask our team about your options.',
-    benefitsLabel: 'WHAT THERAPY CAN HELP YOU BUILD', benefitsTitle: 'Small steps. Meaningful possibilities.', benefitsIntro: 'Therapy is a place to understand yourself and practice skills you can bring into everyday life.', benefits: [['Understand your emotions', 'Find words for what you feel and explore patterns with support.'], ['Navigate difficult days', 'Develop ways to cope with stress and approach everyday challenges.'], ['Communicate what you need', 'Practice expressing yourself and connecting with the people in your life.']], benefitsNote: 'Your goals, pace and experience of therapy are individual.', benefitsCta: 'Take the first step',
-    servicesLabel: 'WE CAN HELP', servicesTitle: 'Support for what life brings.', servicesIntro: 'What you’re going through matters. Counseling offers room to explore it and work toward what matters to you.',
-    services: [['Anxiety & everyday stress', 'Space to talk about worries and the pressures of daily life.'], ['Sadness & difficult emotions', 'Support to explore what you’re feeling, at your own pace.'], ['Grief & life changes', 'A place to talk through loss and new chapters.'], ['Family & relationships', 'Conversations about connection, communication and family challenges.'], ['Children & teens', 'Support for young people and the families caring for them.'], ['Individual counseling', 'One-to-one conversations with a mental health professional.']],
-    whyLabel: 'WHY PILSEN', whyTitle: 'Your story belongs in the conversation.', whyIntro: 'We are a nonprofit community organization providing mental health care rooted in Chicago’s neighborhoods. Culture, language and lived experience matter in the way we approach care.',
-    why: [['In your language', 'Bilingual clinicians are available. Tell our team which language feels right for you.'], ['In your community', 'Rooted in Pilsen and Little Village, with locations across Chicago neighborhoods and nearby suburbs.'], ['At your pace', 'Start by reaching out. You don’t need to explain your story in this form.']],
-    nextLabel: 'WHAT HAPPENS NEXT', nextTitle: 'One step at a time. With support.', steps: [['Send your request', 'Share your contact details, preferred location and service.'], ['Talk with our team', 'Discuss availability, coverage and the location that fits.'], ['Coordinate your appointment', 'After reviewing eligibility and availability, the team will coordinate a date, time and location with you. Your appointment is confirmed only when the team confirms those details.']],
-    faqLabel: 'YOUR QUESTIONS', faqTitle: 'A little clarity can help.', faqs: [['How much does it cost?', 'Pilsen accepts Medicaid. Eligibility and costs depend on your program and coverage. Our team can help you understand your coverage and available options. BCBS PPO, United Healthcare PPO and Cigna PPO are listed for counseling at On Damen, Berwyn and Melrose Park. Confirm your plan and costs before scheduling.'], ['Can I receive care in Spanish?', 'Bilingual clinicians are available. Let the team know that you prefer Spanish when you speak with them.'], ['What happens after I submit?', 'Once the request is received, the team contacts you to discuss next steps. Sending a request does not confirm an appointment.'], ['How long will I wait?', 'Response times and appointment availability still need to be confirmed. We do not promise a same-day callback. This form is not monitored for emergencies.'], ['Is this confidential?', 'This form asks for your name, phone, email, care preferences, Medicaid status and preferred callback time. Do not include symptoms, diagnoses or other medical information. Review the privacy notice and ask the team how your information will be handled.'], ['What if I’ve never been to therapy?', 'You can start by asking questions. The team can explain what an appointment involves and help you understand the next step. You don’t need to know exactly what to say.']],
-    locationsLabel: 'CLOSE TO COMMUNITY', locationsTitle: 'Find your next step, closer to home.', locationsIntro: 'Confirm the program and availability with the team before visiting.', comingSoon: 'Coming soon · waitlist', addressPending: 'Address pending confirmation', phonePending: 'Location phone pending', hoursPending: 'Hours pending confirmation',
-    finalTitle: 'Make room for your well-being.', finalBody: 'You don’t need all the answers to begin. Reach out to Pilsen and explore your next step with our team.', footer: 'Mental health support. Community at heart.',
-    photoPending: 'Photo space · pending Pilsen image', photoHero: 'Reserved for a real team portrait', photoCommunity: 'Reserved for a real care or community space', photoLocation: 'Reserved for a real location photograph', imageAlt: ['AI-generated illustrative scene of two women in a supportive conversation', 'AI-generated illustrative scene of a warm welcome in a community care space', 'Exterior of a Pilsen location']
+  "en": {
+    "title": "Mental Health Counseling in Chicago | Pilsen Wellness Center",
+    "description": "Individual and family therapy in Chicago and surrounding communities. Bilingual mental health counseling in English and Spanish. Medicaid required.",
+    "skip": "Skip to content",
+    "eyebrow": "MENTAL HEALTH · CHICAGO & SUBURBS",
+    "headline": "Mental Health Counseling in Chicago and Surrounding Communities",
+    "emphasis": "Mental health care that understands you.",
+    "intro": "Care for people with Medicaid, in English and Spanish, close to your Chicago community.",
+    "appointment": "Request an appointment",
+    "call": "Call",
+    "pendingPhone": "Appointment phone pending",
+    "heritage": "Rooted in our community. Here for you.",
+    "formTitle": "Request an appointment",
+    "formIntro": "Complete the form to request an appointment. Our team will follow up to explain the process and available options.",
+    "name": "First and last name",
+    "phone": "Phone number",
+    "medicaid": "Do you have Medicaid?",
+    "select": "Select an option",
+    "yes": "Yes",
+    "no": "No",
+    "sending": "Sending…",
+    "privacy": "Contact details and care preferences only. Please don’t include symptoms or diagnoses.",
+    "consent": "By requesting an appointment, you ask Pilsen to contact you about your request.",
+    "privacyLink": "Privacy notice",
+    "preview": "Preview: online requests are not active yet. No information will be sent.",
+    "unavailable": "Online requests are not available yet. Your information has not been sent.",
+    "success": "Your request was received. Our team will contact you about the next step. Your appointment is not yet confirmed.",
+    "error": "We couldn’t confirm receipt. Please try again or call. No appointment has been booked.",
+    "invalid": "Complete your full name, valid phone and email, care preferences.",
+    "trust": [
+      "Medicaid required*",
+      "English & Spanish",
+      "50+ years in the community",
+      "Children, teens & adults"
+    ],
+    "coverage": "*Medicaid is required for these counseling services. Selected locations also offer counseling with certain private insurance plans; see the FAQs or ask our team.",
+    "benefitsLabel": "Counseling for your mental health and everyday challenges",
+    "benefitsTitle": "Small steps. Meaningful possibilities.",
+    "benefitsIntro": "Our mental health counseling services can help you work through anxiety, depression, relationship and family challenges, and other emotional difficulties.",
+    "benefits": [
+      [
+        "Understand your emotions and navigate difficult days",
+        "Explore your feelings, recognize patterns, and develop healthier ways to cope with stress and difficult situations."
+      ],
+      [
+        "Build stronger relationships",
+        "Work on communication, boundaries, and understanding the needs of yourself and the people who matter to you."
+      ],
+      [
+        "Integrated care for your well-being",
+        "Depending on your needs, psychiatric services may be incorporated into your treatment plan. Talk with your therapist about additional services that may support your mental health and overall well-being."
+      ],
+      [
+        "Move toward your goals",
+        "Make time to reflect on what matters to you and identify meaningful steps toward the life you want to build."
+      ]
+    ],
+    "benefitsNote": "Not sure whether our counseling services are right for you? Reach out, and our team can help you understand the next steps.",
+    "benefitsCta": "Take the first step",
+    "servicesLabel": "WE CAN HELP",
+    "servicesTitle": "Support for what life brings.",
+    "servicesIntro": "What you’re going through matters. Counseling offers room to explore it and work toward what matters to you.",
+    "services": [
+      [
+        "Anxiety & everyday stress",
+        "Space to talk about worries and the pressures of daily life."
+      ],
+      [
+        "Sadness & difficult emotions",
+        "Support to explore what you’re feeling, at your own pace."
+      ],
+      [
+        "Grief & life changes",
+        "A place to talk through loss and new chapters."
+      ],
+      [
+        "Family & relationships",
+        "Conversations about connection, communication and family challenges."
+      ],
+      [
+        "Children & teens",
+        "Support for young people and the families caring for them."
+      ],
+      [
+        "Support for a range of mental health conditions",
+        "We provide mental health treatment for conditions including depression, anxiety disorders, bipolar disorder, schizophrenia, ADHD, and others. Our team can help you explore treatment options based on your individual needs."
+      ]
+    ],
+    "whyLabel": "WHY PILSEN WELLNESS CENTER?",
+    "whyTitle": "Your story belongs in the conversation.",
+    "whyIntro": "We are a nonprofit community organization providing mental health care rooted in Chicago’s neighborhoods. Culture, language and lived experience matter in the way we approach care.",
+    "why": [
+      [
+        "In your language",
+        "Bilingual clinicians are available. Tell our team which language feels right for you."
+      ],
+      [
+        "In your community",
+        "Rooted in Pilsen and Little Village, with locations across Chicago neighborhoods and nearby suburbs."
+      ],
+      [
+        "At your pace",
+        "Start by reaching out. You don’t need to explain your story in this form."
+      ]
+    ],
+    "nextLabel": "WHAT HAPPENS NEXT",
+    "nextTitle": "One step at a time. With support.",
+    "steps": [
+      [
+        "Send your request",
+        "Share your contact details, preferred location and service."
+      ],
+      [
+        "Talk with our team",
+        "Discuss coverage, availability and your preferred location. Have your Medicaid card or insurance details ready so we can confirm eligibility."
+      ],
+      [
+        "Coordinate your appointment",
+        "After reviewing eligibility and availability, the team will coordinate a date, time and location with you. Your appointment is confirmed only when the team confirms those details."
+      ]
+    ],
+    "faqLabel": "YOUR QUESTIONS",
+    "faqTitle": "Let’s make the first step feel easier",
+    "faqs": [
+      [
+        "What insurance do you accept, and what will it cost?",
+        "Pilsen Wellness Center accepts Medicaid. Select counseling locations—Pilsen On Damen, Berwyn, and Melrose Park—also accept Blue Cross Blue Shield PPO, UnitedHealthcare PPO, and Cigna PPO plans. Your costs depend on the services you receive and your insurance coverage. Contact our team to confirm whether your plan is accepted. Have your insurance information, such as your Medicaid card, ready when we call to confirm eligibility."
+      ],
+      [
+        "Who can receive mental health counseling?",
+        "Pilsen Wellness Center offers mental health services for adults, children, and adolescents, including individual and family therapy. Medicaid is required for these services. For other insurance, see the selected-location options above."
+      ],
+      [
+        "Are services available in Spanish?",
+        "Yes, bilingual care is available. We provide individual and family counseling in English and Spanish. Finding the words to describe how you feel can be easier in the language you’re most comfortable with."
+      ],
+      [
+        "How do I request an appointment?",
+        "Complete the appointment request form on this page. Our team will follow up about the next steps. Submitting a request does not confirm an appointment."
+      ],
+      [
+        "When can I expect a response? How soon can I start services?",
+        "Our team will contact you in the next business days and look for available appointments at locations that fit your preferences. Availability varies by location; some sites have no waiting list. The team will confirm the timing for your request. This form is not monitored for emergencies. Please see the Medical Disclaimer below the form."
+      ],
+      [
+        "Where are mental health services available?",
+        "Pilsen Wellness Center serves Chicago and surrounding communities. The directory includes 16 counseling locations, including 6 in nearby suburbs. This includes Joliet, currently listed as coming soon. Explore the locations below and confirm the service and availability with our team before visiting."
+      ],
+      [
+        "Is this confidential?",
+        "This form asks for your name, phone, email, care preferences, Medicaid status and preferred callback time so we can contact you about services. Do not provide symptoms, diagnoses or other medical information. Review Pilsen Wellness Center’s Privacy Policy if you have questions."
+      ],
+      [
+        "What if I’ve never been to therapy?",
+        "You can start by asking questions. The team can explain what a therapy appointment involves and help you understand the next step. You don’t need to know exactly what to say."
+      ]
+    ],
+    "locationsLabel": "CLOSE TO COMMUNITY",
+    "locationsTitle": "Find your next step, closer to home.",
+    "locationsIntro": "Confirm the program and availability with the team before visiting.",
+    "comingSoon": "Coming soon · waitlist",
+    "addressPending": "Address pending confirmation",
+    "phonePending": "Location phone pending",
+    "hoursPending": "Hours pending confirmation",
+    "finalTitle": "Make room for your well-being.",
+    "finalBody": "What would you like support with? Reach out to Pilsen Wellness Center to ask about counseling and your next steps.",
+    "footer": "Mental health support. Community at heart.",
+    "photoPending": "Photo space · pending Pilsen image",
+    "photoHero": "Reserved for a real team portrait",
+    "photoCommunity": "Reserved for a real care or community space",
+    "photoLocation": "Reserved for a real location photograph",
+    "imageAlt": [
+      "AI-generated illustrative scene of two women in a supportive conversation",
+      "AI-generated illustrative scene of a warm welcome in a community care space",
+      "Exterior of a Pilsen location"
+    ],
+    "heroDetailTitle": "Care shaped around your story",
+    "heroDetail": "Your culture, language, and life experiences matter. At Pilsen Wellness Center, our culturally sensitive approach to mental health care supports individuals and families across the Chicago area. Life brings challenges, and sometimes they can feel like too much to handle alone. Whether you’re navigating anxiety, depression, family concerns, or a major life change, therapy can offer a place to pause, understand what you’re going through, and explore new ways forward.",
+    "heroCare": "Individual and family mental health counseling, with bilingual care available. Medicaid is required for these services.",
+    "whyLead": "Your story matters. Your background, your family, your experiences, and your goals are all part of who you are.",
+    "whyHistoryTitle": "More than 50 years serving our community",
+    "whyHistory": "Pilsen Wellness Center has provided mental health services in the Chicago area for more than 50 years, with an approach that recognizes the importance of culture, family, and community.",
+    "whyWelcome": "We believe mental health care should be welcoming, respectful, and connected to the communities we serve. Our team can help you understand the services available and the next steps toward care.",
+    "contactTeam": "Contact our team",
+    "appointmentTitle": "A better tomorrow starts with one conversation.",
+    "appointmentIntro": "Reaching out for support is a meaningful step.",
+    "requestNote": "Submitting a request does not guarantee an appointment or confirm eligibility.",
+    "insuranceReminder": "Have your insurance information, such as your Medicaid card, ready when we contact you to confirm eligibility.",
+    "privacyAgree": "I agree to Pilsen Wellness Center’s",
+    "privacyPolicy": "Privacy Policy",
+    "disclaimerTitle": "Medical disclaimer",
+    "disclaimer": "Call 911 immediately if you believe you are experiencing a medical emergency. Do not rely on communication through this website for urgent medical needs."
   },
-  es: {
-    title: 'Atención de salud mental en Chicago | Pilsen Wellness Center', description: 'Terapia individual y apoyo para las relaciones familiares en Chicago y comunidades cercanas. Atención en español e inglés para personas con Medicaid.',
-    skip: 'Saltar al contenido', eyebrow: 'SALUD MENTAL · CHICAGO Y ALREDEDORES', headline: 'Atención de salud mental en Chicago y comunidades cercanas.', emphasis: 'Más herramientas para tu día a día. Un espacio para ti.', intro: 'Encuentra acompañamiento y herramientas para tu día a día. Terapia para personas con Medicaid, en español e inglés.',
-    appointment: 'Pide tu cita', call: 'Llamar', pendingPhone: 'Teléfono de citas pendiente', heritage: 'Parte de tu comunidad. Cerca de ti.',
-    formTitle: 'Tu siguiente paso empieza aquí.', formIntro: 'Cuéntanos qué atención buscas y después cómo contactarte. Nuestro equipo te ayudará a explorar el siguiente paso.', name: 'Nombre y apellido', phone: 'Teléfono', medicaid: '¿Tienes Medicaid?', select: 'Elige una opción', yes: 'Sí', no: 'No', sending: 'Enviando…',
-    privacy: 'Solo datos de contacto y preferencias de atención. No incluyas síntomas ni diagnósticos.', consent: 'Al pedir tu cita, solicitas que Pilsen te contacte sobre tu solicitud.', privacyLink: 'Aviso de privacidad',
-    preview: 'Vista previa: las solicitudes en línea aún no están activas. No se enviará información.', unavailable: 'Las solicitudes en línea aún no están disponibles. Tus datos no se han enviado.', success: 'Recibimos tu solicitud. El equipo te contactará para explicarte el siguiente paso. Tu cita aún no está confirmada.', error: 'No pudimos confirmar la recepción. Intenta de nuevo o llama. No se ha reservado ninguna cita.', invalid: 'Completa tu nombre y apellido, teléfono y correo válidos, preferencias de atención.',
-    trust: ['Aceptamos Medicaid*', 'Español e inglés', '50+ años en la comunidad', 'Niños, jóvenes y adultos'], coverage: '*La cobertura y los requisitos dependen del programa. Consulta tus opciones con el equipo.',
-    benefitsLabel: 'LO QUE PUEDES TRABAJAR EN TERAPIA', benefitsTitle: 'Pequeños pasos. Nuevas posibilidades.', benefitsIntro: 'Un espacio para conocerte y practicar herramientas que puedas llevar a tu vida cotidiana.', benefits: [['Comprender tus emociones', 'Poner en palabras lo que sientes y explorar tus patrones con acompañamiento.'], ['Afrontar los días difíciles', 'Desarrollar formas de manejar el estrés y abordar los retos cotidianos.'], ['Expresar lo que necesitas', 'Practicar cómo comunicarte y conectar con las personas que forman parte de tu vida.']], benefitsNote: 'Tus objetivos, tu ritmo y tu experiencia en terapia son personales.', benefitsCta: 'Da el primer paso',
-    servicesLabel: 'TE PODEMOS AYUDAR', servicesTitle: 'Apoyo para lo que estás viviendo.', servicesIntro: 'Lo que sientes importa. En terapia puedes explorar lo que te preocupa y trabajar en lo que quieres para ti.',
-    services: [['Ansiedad y estrés', 'Un espacio para hablar de las preocupaciones y presiones del día a día.'], ['Tristeza y emociones difíciles', 'Acompañamiento para explorar lo que sientes, a tu ritmo.'], ['Duelo y cambios de vida', 'Un lugar para hablar de pérdidas y nuevas etapas.'], ['Familia y relaciones', 'Conversaciones sobre comunicación, vínculos y retos familiares.'], ['Niños y adolescentes', 'Apoyo para los más jóvenes y para las familias que los acompañan.'], ['Terapia individual', 'Conversaciones uno a uno con un profesional de salud mental.']],
-    whyLabel: 'POR QUÉ PILSEN', whyTitle: 'Tu historia tiene un lugar aquí.', whyIntro: 'Somos una organización comunitaria sin fines de lucro que brinda atención de salud mental cerca de los barrios de Chicago. Tu cultura, tu idioma y tu historia importan en nuestra forma de acompañarte.',
-    why: [['En tu idioma', 'Hay profesionales bilingües disponibles. Cuéntanos si prefieres hablar en español.'], ['En tu comunidad', 'Con raíces en Pilsen y Little Village, y sedes en barrios de Chicago y suburbios cercanos.'], ['A tu ritmo', 'Puedes empezar por contactarnos. No necesitas contar tu historia en este formulario.']],
-    nextLabel: 'QUÉ SIGUE', nextTitle: 'Paso a paso. Con acompañamiento.', steps: [['Deja tu solicitud', 'Comparte tu contacto y tus preferencias de sede y servicio.'], ['Habla con el equipo', 'Revisen disponibilidad, cobertura y la sede que te conviene.'], ['Coordina tu cita', 'Tras revisar requisitos y disponibilidad, el equipo acordará contigo la fecha, hora y sede. Tu cita queda confirmada cuando el equipo te confirme esos datos.']],
-    faqLabel: 'TUS PREGUNTAS', faqTitle: 'Un poco de claridad para empezar.', faqs: [['¿Cuánto cuesta?', 'Pilsen acepta Medicaid. Los requisitos y costos dependen del programa y de tu cobertura. Nuestro equipo puede orientarte sobre tu cobertura y las opciones disponibles. El sitio publica BCBS PPO, United Healthcare PPO y Cigna PPO para terapia en On Damen, Berwyn y Melrose Park. Confirma tu plan y los costos antes de agendar.'], ['¿Puedo recibir atención en español?', 'Hay profesionales bilingües disponibles. Cuando hables con el equipo, diles que prefieres recibir atención en español.'], ['¿Qué pasa después de enviar mis datos?', 'Una vez recibida la solicitud, el equipo te contacta para hablar del siguiente paso. Enviar tus datos no confirma una cita.'], ['¿Cuánto tengo que esperar?', 'Los tiempos de respuesta y la disponibilidad de citas están pendientes de confirmar. No prometemos una llamada el mismo día. Este formulario no se monitorea para emergencias.'], ['¿Es confidencial?', 'Aquí pedimos tu nombre, teléfono, correo, preferencias de atención y llamada, y si la persona cuenta con Medicaid. No incluyas síntomas, diagnósticos ni otra información médica. Revisa el aviso de privacidad y pregunta al equipo cómo se manejarán tus datos.'], ['¿Y si nunca he ido a terapia?', 'Puedes empezar haciendo preguntas. El equipo puede explicarte cómo es una cita y orientarte sobre el siguiente paso. No necesitas saber exactamente qué decir.']],
-    locationsLabel: 'CERCA DE LA COMUNIDAD', locationsTitle: 'Un siguiente paso, más cerca de ti.', locationsIntro: 'Confirma el programa y la disponibilidad con el equipo antes de acudir.', comingSoon: 'Próxima apertura · lista de espera', addressPending: 'Dirección pendiente de confirmar', phonePending: 'Teléfono de sede pendiente', hoursPending: 'Horarios pendientes de confirmar',
-    finalTitle: 'Dale un lugar a tu bienestar.', finalBody: 'No necesitas tener todas las respuestas para empezar. Acércate a Pilsen y explora tu siguiente paso con nuestro equipo.', footer: 'Salud mental con sentido de comunidad.',
-    photoPending: 'Espacio de foto · imagen de Pilsen pendiente', photoHero: 'Espacio para un retrato del equipo real', photoCommunity: 'Espacio para una foto real de atención o comunidad', photoLocation: 'Espacio para una foto real de la sede', imageAlt: ['Escena ilustrativa creada con IA de dos mujeres en una conversación de apoyo', 'Escena ilustrativa creada con IA de una bienvenida en un espacio de atención comunitaria', 'Fachada de una sede de Pilsen']
+  "es": {
+    "title": "Atención de salud mental en Chicago | Pilsen Wellness Center",
+    "description": "Terapia individual y familiar en Chicago y comunidades cercanas. Atención bilingüe de salud mental en español e inglés. Se requiere Medicaid.",
+    "skip": "Saltar al contenido",
+    "eyebrow": "SALUD MENTAL · CHICAGO Y ALREDEDORES",
+    "headline": "Atención de salud mental en Chicago y comunidades cercanas.",
+    "emphasis": "Atención de salud mental que te comprende.",
+    "intro": "Atención para personas con Medicaid, en español e inglés, cerca de tu comunidad en Chicago.",
+    "appointment": "Pide tu cita",
+    "call": "Llamar",
+    "pendingPhone": "Teléfono de citas pendiente",
+    "heritage": "Parte de tu comunidad. Cerca de ti.",
+    "formTitle": "Solicita una cita",
+    "formIntro": "Completa el formulario para solicitar una cita. Nuestro equipo te contactará para explicar el proceso y las opciones disponibles.",
+    "name": "Nombre y apellido",
+    "phone": "Teléfono",
+    "medicaid": "¿Tienes Medicaid?",
+    "select": "Elige una opción",
+    "yes": "Sí",
+    "no": "No",
+    "sending": "Enviando…",
+    "privacy": "Solo datos de contacto y preferencias de atención. No incluyas síntomas ni diagnósticos.",
+    "consent": "Al pedir tu cita, solicitas que Pilsen te contacte sobre tu solicitud.",
+    "privacyLink": "Aviso de privacidad",
+    "preview": "Vista previa: las solicitudes en línea aún no están activas. No se enviará información.",
+    "unavailable": "Las solicitudes en línea aún no están disponibles. Tus datos no se han enviado.",
+    "success": "Recibimos tu solicitud. El equipo te contactará para explicarte el siguiente paso. Tu cita aún no está confirmada.",
+    "error": "No pudimos confirmar la recepción. Intenta de nuevo o llama. No se ha reservado ninguna cita.",
+    "invalid": "Completa tu nombre y apellido, teléfono y correo válidos, preferencias de atención.",
+    "trust": [
+      "Se requiere Medicaid*",
+      "Español e inglés",
+      "50+ años en la comunidad",
+      "Niños, jóvenes y adultos"
+    ],
+    "coverage": "*Se requiere Medicaid para estos servicios de terapia. Algunas sedes también ofrecen terapia con ciertos seguros privados; consulta las preguntas frecuentes o habla con el equipo.",
+    "benefitsLabel": "Terapia para tu salud mental y los retos cotidianos",
+    "benefitsTitle": "Pequeños pasos. Nuevas posibilidades.",
+    "benefitsIntro": "Nuestros servicios de terapia pueden ayudarte a trabajar la ansiedad, la depresión, los retos familiares y de pareja, y otras dificultades emocionales.",
+    "benefits": [
+      [
+        "Comprende tus emociones y afronta los días difíciles",
+        "Explora lo que sientes, reconoce patrones y desarrolla formas más saludables de afrontar el estrés y las situaciones difíciles."
+      ],
+      [
+        "Fortalece tus relaciones",
+        "Trabaja la comunicación, los límites y la comprensión de tus necesidades y las de las personas importantes para ti."
+      ],
+      [
+        "Atención integral para tu bienestar",
+        "Según tus necesidades, tu plan de tratamiento puede incluir servicios de psiquiatría. Habla con tu terapeuta sobre otros servicios que puedan apoyar tu salud mental y bienestar."
+      ],
+      [
+        "Avanza hacia tus metas",
+        "Date un espacio para reflexionar sobre lo que te importa e identificar pasos significativos hacia la vida que quieres construir."
+      ]
+    ],
+    "benefitsNote": "¿No sabes si nuestros servicios de terapia son adecuados para ti? Contáctanos y el equipo te ayudará a comprender los siguientes pasos.",
+    "benefitsCta": "Da el primer paso",
+    "servicesLabel": "TE PODEMOS AYUDAR",
+    "servicesTitle": "Apoyo para lo que estás viviendo.",
+    "servicesIntro": "Lo que sientes importa. En terapia puedes explorar lo que te preocupa y trabajar en lo que quieres para ti.",
+    "services": [
+      [
+        "Ansiedad y estrés",
+        "Un espacio para hablar de las preocupaciones y presiones del día a día."
+      ],
+      [
+        "Tristeza y emociones difíciles",
+        "Acompañamiento para explorar lo que sientes, a tu ritmo."
+      ],
+      [
+        "Duelo y cambios de vida",
+        "Un lugar para hablar de pérdidas y nuevas etapas."
+      ],
+      [
+        "Familia y relaciones",
+        "Conversaciones sobre comunicación, vínculos y retos familiares."
+      ],
+      [
+        "Niños y adolescentes",
+        "Apoyo para los más jóvenes y para las familias que los acompañan."
+      ],
+      [
+        "Apoyo para distintas condiciones de salud mental",
+        "Ofrecemos tratamiento para condiciones como depresión, trastornos de ansiedad, trastorno bipolar, esquizofrenia, TDAH y otras. Nuestro equipo puede ayudarte a explorar opciones de tratamiento según tus necesidades."
+      ]
+    ],
+    "whyLabel": "¿POR QUÉ PILSEN WELLNESS CENTER?",
+    "whyTitle": "Tu historia tiene un lugar aquí.",
+    "whyIntro": "Somos una organización comunitaria sin fines de lucro que brinda atención de salud mental cerca de los barrios de Chicago. Tu cultura, tu idioma y tu historia importan en nuestra forma de acompañarte.",
+    "why": [
+      [
+        "En tu idioma",
+        "Hay profesionales bilingües disponibles. Cuéntanos si prefieres hablar en español."
+      ],
+      [
+        "En tu comunidad",
+        "Con raíces en Pilsen y Little Village, y sedes en barrios de Chicago y suburbios cercanos."
+      ],
+      [
+        "A tu ritmo",
+        "Puedes empezar por contactarnos. No necesitas contar tu historia en este formulario."
+      ]
+    ],
+    "nextLabel": "QUÉ SIGUE",
+    "nextTitle": "Paso a paso. Con acompañamiento.",
+    "steps": [
+      [
+        "Deja tu solicitud",
+        "Comparte tu contacto y tus preferencias de sede y servicio."
+      ],
+      [
+        "Habla con el equipo",
+        "Habla sobre cobertura, disponibilidad y tu sede preferida. Ten a la mano tu tarjeta de Medicaid o los datos de tu seguro para confirmar los requisitos de atención."
+      ],
+      [
+        "Coordina tu cita",
+        "Tras revisar requisitos y disponibilidad, el equipo acordará contigo la fecha, hora y sede. Tu cita queda confirmada cuando el equipo te confirme esos datos."
+      ]
+    ],
+    "faqLabel": "TUS PREGUNTAS",
+    "faqTitle": "Hagamos que el primer paso sea más sencillo",
+    "faqs": [
+      [
+        "¿Qué seguros aceptan y cuánto cuesta?",
+        "Pilsen Wellness Center acepta Medicaid. Algunas sedes de terapia —Pilsen On Damen, Berwyn y Melrose Park— también aceptan Blue Cross Blue Shield PPO, UnitedHealthcare PPO y Cigna PPO. Los costos dependen de los servicios que recibas y de tu cobertura. Contacta al equipo para confirmar si aceptamos tu plan. Cuando te llamemos, ten a la mano los datos de tu seguro, como tu tarjeta de Medicaid, para confirmar los requisitos de atención."
+      ],
+      [
+        "¿Quién puede recibir terapia de salud mental?",
+        "Pilsen Wellness Center ofrece servicios de salud mental para adultos, niños y adolescentes, incluyendo terapia individual y familiar. Se requiere Medicaid para estos servicios. Para otros seguros, consulta las opciones de sedes indicadas arriba."
+      ],
+      [
+        "¿Hay atención en español?",
+        "Sí, hay atención bilingüe. Ofrecemos terapia individual y familiar en español e inglés. Encontrar las palabras para expresar lo que sientes puede ser más fácil en el idioma con el que te sientes más cómodo."
+      ],
+      [
+        "¿Cómo solicito una cita?",
+        "Completa el formulario de solicitud de esta página. Nuestro equipo te contactará para explicarte los siguientes pasos. Enviar una solicitud no confirma una cita."
+      ],
+      [
+        "¿Cuándo me responderán y cuándo puedo empezar?",
+        "Nuestro equipo te contactará en los próximos días hábiles y buscará citas en las sedes que se ajusten a tus preferencias. La disponibilidad varía según la ubicación; algunas sedes no tienen lista de espera. El equipo confirmará los tiempos para tu solicitud. Este formulario no se monitorea para emergencias. Consulta el aviso médico debajo del formulario."
+      ],
+      [
+        "¿Dónde ofrecen servicios de salud mental?",
+        "Pilsen Wellness Center atiende Chicago y comunidades cercanas. El directorio incluye 16 sedes de terapia, 6 de ellas en suburbios cercanos. Esta cifra incluye Joliet, que actualmente figura como próxima apertura. Explora las ubicaciones de abajo y confirma el servicio y la disponibilidad con el equipo antes de acudir."
+      ],
+      [
+        "¿Es confidencial?",
+        "Este formulario solicita tu nombre, teléfono, correo, preferencias de atención, si cuentas con Medicaid y horario preferido de llamada para contactarte sobre los servicios. No incluyas síntomas, diagnósticos ni otra información médica. Si tienes dudas, consulta la Política de privacidad de Pilsen Wellness Center."
+      ],
+      [
+        "¿Y si nunca he ido a terapia?",
+        "Puedes empezar haciendo preguntas. El equipo puede explicarte cómo es una cita de terapia y orientarte sobre el siguiente paso. No necesitas saber exactamente qué decir."
+      ]
+    ],
+    "locationsLabel": "CERCA DE LA COMUNIDAD",
+    "locationsTitle": "Un siguiente paso, más cerca de ti.",
+    "locationsIntro": "Confirma el programa y la disponibilidad con el equipo antes de acudir.",
+    "comingSoon": "Próxima apertura · lista de espera",
+    "addressPending": "Dirección pendiente de confirmar",
+    "phonePending": "Teléfono de sede pendiente",
+    "hoursPending": "Horarios pendientes de confirmar",
+    "finalTitle": "Dale un lugar a tu bienestar.",
+    "finalBody": "¿En qué te gustaría recibir apoyo? Contacta a Pilsen Wellness Center para conocer nuestros servicios de terapia y los siguientes pasos.",
+    "footer": "Salud mental con sentido de comunidad.",
+    "photoPending": "Espacio de foto · imagen de Pilsen pendiente",
+    "photoHero": "Espacio para un retrato del equipo real",
+    "photoCommunity": "Espacio para una foto real de atención o comunidad",
+    "photoLocation": "Espacio para una foto real de la sede",
+    "imageAlt": [
+      "Escena ilustrativa creada con IA de dos mujeres en una conversación de apoyo",
+      "Escena ilustrativa creada con IA de una bienvenida en un espacio de atención comunitaria",
+      "Fachada de una sede de Pilsen"
+    ],
+    "heroDetailTitle": "Atención que toma en cuenta tu historia",
+    "heroDetail": "Tu cultura, tu idioma y tus experiencias importan. En Pilsen Wellness Center, nuestro enfoque culturalmente sensible acompaña a personas y familias del área de Chicago. A veces, los retos de la vida pueden sentirse demasiado difíciles para afrontarlos a solas. Ya sea que vivas ansiedad, depresión, dificultades familiares o un cambio importante, la terapia puede ofrecerte un espacio para hacer una pausa, comprender lo que estás viviendo y explorar nuevas formas de avanzar.",
+    "heroCare": "Terapia individual y familiar con atención bilingüe disponible. Se requiere Medicaid para estos servicios.",
+    "whyLead": "Tu historia importa. Tu origen, tu familia, tus experiencias y tus metas forman parte de quien eres.",
+    "whyHistoryTitle": "Más de 50 años al servicio de nuestra comunidad",
+    "whyHistory": "Pilsen Wellness Center ha brindado servicios de salud mental en el área de Chicago durante más de 50 años, con un enfoque que reconoce la importancia de la cultura, la familia y la comunidad.",
+    "whyWelcome": "Creemos que la atención de salud mental debe ser acogedora, respetuosa y cercana a las comunidades que atendemos. Nuestro equipo puede ayudarte a conocer los servicios disponibles y los siguientes pasos para recibir atención.",
+    "contactTeam": "Habla con nuestro equipo",
+    "appointmentTitle": "Un mejor mañana empieza con una conversación.",
+    "appointmentIntro": "Buscar apoyo es un paso importante.",
+    "requestNote": "Enviar una solicitud no garantiza una cita ni confirma que cumples los requisitos de atención.",
+    "insuranceReminder": "Cuando te contactemos, ten a la mano los datos de tu seguro, como tu tarjeta de Medicaid, para confirmar los requisitos de atención.",
+    "privacyAgree": "Acepto la",
+    "privacyPolicy": "Política de privacidad de Pilsen Wellness Center",
+    "disclaimerTitle": "Aviso médico",
+    "disclaimer": "Llama al 911 inmediatamente si crees que estás viviendo una emergencia médica. No dependas de la comunicación por este sitio para necesidades médicas urgentes."
   }
 };

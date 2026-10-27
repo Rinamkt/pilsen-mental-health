@@ -30,7 +30,7 @@ export function AppointmentForm({ locale, enabled }: { locale: Locale; enabled: 
     if (step === 1) { moveTo(2); return; }
     if (!enabled) { setStatus(c.unavailable); return; }
     const data = new FormData(form);
-    const payload = validateIntake(Object.fromEntries(data));
+    const payload = validateIntake({...Object.fromEntries(data), privacyAccepted: data.get('privacyAccepted') === 'true'});
     if (!payload) { setStatus(c.invalid); return; }
     lock.current = true; setBusy(true); setStatus('');
     try {
@@ -47,9 +47,9 @@ export function AppointmentForm({ locale, enabled }: { locale: Locale; enabled: 
       <h3 ref={stepHeading} tabIndex={-1} className="step-heading">{locale === 'es' ? `Paso ${step} de 2: ${step === 1 ? '¿Qué atención buscas?' : '¿Cómo podemos contactarte?'}` : `Step ${step} of 2: ${step === 1 ? 'What care are you looking for?' : 'How can we reach you?'}`}</h3>
       <fieldset data-step="1" hidden={step !== 1} disabled={busy || sent}><legend className="sr-only">{locale === 'es' ? 'Preferencias de atención' : 'Care preferences'}</legend>
       <label htmlFor="service">{locale === 'es' ? '¿Qué atención buscas?' : 'What type of care are you looking for?'}</label>
-      <select id="service" name="service" required defaultValue="" disabled={busy || sent} aria-describedby="routing-help"><option value="" disabled>{c.select}</option><option value="mental-health">{locale === 'es' ? 'Salud mental' : 'Mental health'}</option><option value="other">{locale === 'es' ? 'Otro servicio' : 'Other service'}</option></select>
+      <select id="service" name="service" required defaultValue="" disabled={busy || sent} aria-describedby="routing-help"><option value="" disabled>{c.select}</option><option value="mental-health">{locale === 'es' ? 'Terapia de salud mental · con Medicaid' : 'Mental Health Counseling - With Medicaid insurance'}</option><option value="other">{locale === 'es' ? 'Otro servicio o seguro' : 'Any other Service or Insurance'}</option></select>
       <label htmlFor="location">{locale === 'es' ? '¿En qué sede te gustaría recibir atención?' : 'Where would you prefer to receive care?'}</label>
-      <select id="location" name="location" required defaultValue="" disabled={busy || sent} aria-describedby="routing-help"><option value="" disabled>{c.select}</option><option value="guidance">{locale === 'es' ? 'Necesito orientación para elegir' : 'Help me choose a location'}</option>{intakeLocations.map(l=><option key={l.name} value={l.name}>{l.name}</option>)}</select>
+      <select id="location" name="location" required defaultValue="" disabled={busy || sent} aria-describedby="routing-help"><option value="" disabled>{c.select}</option><option value="guidance">{locale === 'es' ? 'Necesito orientación para elegir' : 'Help me choose a location'}</option>{intakeLocations.map(l=><option key={l.name} value={l.name}>{l.name}{l.comingSoon ? (locale === 'es' ? ' · próxima apertura' : ' · coming soon') : ''}</option>)}</select>
       <p id="routing-help" className="coverage-help">{locale === 'es' ? 'La sede es una preferencia. El equipo confirmará dónde se ofrece el servicio que necesitas.' : 'Your location is a preference. Our team will confirm where the service you need is available.'}</p>
       <label htmlFor="careFor">{locale === 'es' ? '¿Para quién buscas atención?' : 'Who are you seeking care for?'}</label>
       <select id="careFor" name="careFor" required defaultValue="" disabled={busy || sent}><option value="" disabled>{c.select}</option><option value="self">{locale === 'es' ? 'Para mí' : 'Myself'}</option><option value="family">{locale === 'es' ? 'Para un familiar' : 'A family member'}</option></select>
@@ -64,14 +64,15 @@ export function AppointmentForm({ locale, enabled }: { locale: Locale; enabled: 
       <label htmlFor="callbackTime">{locale === 'es' ? 'Horario preferido para recibir una llamada (opcional)' : 'Preferred callback time (optional)'}</label>
       <select id="callbackTime" name="callbackTime" defaultValue="any" disabled={busy || sent} aria-describedby="callback-help"><option value="any">{locale === 'es' ? 'Sin preferencia' : 'No preference'}</option><option value="morning">{locale === 'es' ? 'Mañana' : 'Morning'}</option><option value="afternoon">{locale === 'es' ? 'Tarde' : 'Afternoon'}</option></select>
       <p id="callback-help" className="coverage-help">{locale === 'es' ? 'Hora de Chicago. Es una preferencia, sujeta a disponibilidad del equipo.' : 'Chicago time. This is a preference, subject to team availability.'}</p>
+      <label className="privacy-accept"><input type="checkbox" name="privacyAccepted" value="true" required/><span>{c.privacyAgree} <a href={`https://www.pilsenwellnesscenter.org/${locale}/privacy`} target="_blank" rel="noopener noreferrer">{c.privacyPolicy}</a>.</span></label>
       </fieldset>
       <div className="form-step-actions">{step === 2 && <button className="back-button" type="button" disabled={busy || sent} onClick={() => moveTo(1)}>{locale === 'es' ? 'Volver' : 'Back'}</button>}<button className="button" type="submit" disabled={busy || sent || (step === 2 && !enabled)}>{step === 1 ? (locale === 'es' ? 'Continuar' : 'Continue') : busy ? c.sending : c.appointment}<span aria-hidden="true">↗</span></button></div>
-      <p className="request-explainer">{locale === 'es' ? 'Enviar esta solicitud no confirma una cita.' : 'Submitting this request does not confirm an appointment.'}</p>
+      <p className="request-explainer">{c.requestNote}</p>
       {!enabled && <p className="preview-note">{c.preview}</p>}
-      <p className="form-privacy" id="form-privacy">{c.privacy} {c.consent} <a href={`https://www.pilsenwellnesscenter.org/${locale}/privacy`}>{c.privacyLink}</a>.</p>
+      <p className="coverage-help insurance-reminder">{c.insuranceReminder}</p><p className="form-privacy" id="form-privacy">{c.privacy} {c.consent} <a href={`https://www.pilsenwellnesscenter.org/${locale}/privacy`}>{c.privacyLink}</a>.</p>
       <p role="status" aria-live="polite" className="form-status">{status}</p>
       <noscript><p>{locale === 'es' ? 'Activa JavaScript para enviar el formulario en línea.' : 'Enable JavaScript to submit the online form.'}</p></noscript>
-    </form><div className="form-call"><span>{site.dedicatedPhone ? c.appointment : locale === 'es' ? 'Servicios e información' : 'Services & information'}</span><Phone locale={locale} /><WhatsApp locale={locale} /></div>
+    </form><aside className="medical-disclaimer" id="medical-disclaimer"><h3>{c.disclaimerTitle}</h3><p>{c.disclaimer}</p><a href="tel:911">{locale === 'es' ? 'Llamar al 911' : 'Call 911'}</a></aside><div className="form-call"><span>{site.dedicatedPhone ? c.appointment : locale === 'es' ? 'Servicios e información' : 'Services & information'}</span><Phone locale={locale} /><WhatsApp locale={locale} /></div>
   </section>;
 }
 

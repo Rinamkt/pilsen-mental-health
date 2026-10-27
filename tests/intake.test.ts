@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { validateIntake } from '../src/lib/validation.ts';
 import { track, setMeasurementConsent } from '../src/lib/analytics.ts';
-const valid = { medicaid: 'yes', name: 'Test Person', phone: '312-555-0100', email: 'test@example.com', careFor: 'self', callbackTime: 'any',  location: 'guidance', service: 'mental-health' };
+const valid = { privacyAccepted: true, medicaid: 'yes', name: 'Test Person', phone: '312-555-0100', email: 'test@example.com', careFor: 'self', callbackTime: 'any',  location: 'guidance', service: 'mental-health' };
 test('accepts both Medicaid answers and requires an explicit selection', () => { for (const medicaid of ['yes','no']) assert.ok(validateIntake({...valid,medicaid})); for (const medicaid of ['',undefined,'unsure']) assert.equal(validateIntake({...valid,medicaid}),null); });
 test('rejects malformed input, extra clinical fields and oversized values', () => {
   for (const value of [null, [], {}, {...valid, diagnosis:'test'}, {...valid,name:' '}, {...valid,name:'x'.repeat(81)}, {...valid,phone:'abc1234567'}, {...valid,phone:'123'}, {...valid,medicaid:'maybe'}]) assert.equal(validateIntake(value),null);
@@ -22,3 +22,9 @@ test('requires valid routing and rejects removed Medicaid choice', () => {
 });
 
 test('requires email and valid care preferences',()=>{for(const patch of [{email:''},{email:'invalid'},{email:'a@b.com\nBcc:bad'},{careFor:'other'},{callbackTime:'midnight'}]) assert.equal(validateIntake({...valid,...patch}),null); assert.ok(validateIntake({...valid,careFor:'family',callbackTime:'afternoon'}));});
+
+test('requires explicit privacy acceptance and accepts Joliet as a preference', () => {
+ for (const privacyAccepted of [false, undefined, 'true', 'on']) assert.equal(validateIntake({...valid,privacyAccepted}),null);
+ assert.ok(validateIntake({...valid,privacyAccepted:true,location:'Joliet'}));
+ assert.equal(validateIntake({...valid,location:'Wellness Inn'}),null);
+});
